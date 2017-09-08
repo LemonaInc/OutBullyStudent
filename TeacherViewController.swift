@@ -37,12 +37,17 @@ class TeacherViewController: UIViewController, UIWebViewDelegate   {
     // Webview did load
     func webViewDidFinishLoad(webView: UIWebView) {
         print("webview did finish load!")
+        
+        let alert = UIAlertController(title: "Alert", message: "Web View Did Finish Load", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     
     // Webview did fail to load with error
     func webView(webView: UIWebView, didFailLoadWithError error: Error) {
         print("webview did fail load with error: \(error)")
+        print ("Failed")
     }
     
     
